@@ -1,0 +1,75 @@
+.postacie {
+  background-color: #f9f9f9;
+  border-radius: 1rem;
+  padding: 1rem;
+  width: 300px;
+  margin: 1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  cursor: pointer;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+
+
+  &__img {
+    width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+    object-fit: cover;
+  }
+
+  &__name {
+    margin-top: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  &__wrap {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, padding 0.3s ease;
+  }
+
+  &__description {
+    color: black;
+    padding-top: 0;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    text-align: left;
+
+    a {
+      display: inline-block;
+      margin-top: 0.5rem;
+      color: #3498db;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+}
+
+  &.open {
+    .postacie__wrap {
+      max-height: 1500px; 
+      padding-top: 1rem;
+    }
+  }
+
+
+  &:hover {
+    transform: scale(1.02);
+  }
+}
+.postacie-list {
+    display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  align-items: flex-start;
+}

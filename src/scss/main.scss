@@ -1,0 +1,10 @@
+@import "./reset";
+@import "./star";
+@import "./variables";
+@import "./mixins";
+@import "./body";
+// ----------------------------------
+@import "./components/_header";
+@import "./components/characters";
+@import "./components/footer";
+@import "./components/datingsim";
